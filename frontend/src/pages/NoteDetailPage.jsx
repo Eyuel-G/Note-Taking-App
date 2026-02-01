@@ -54,7 +54,13 @@ export const NoteDetailPage = () => {
     setSaving(true)
 
     try{
-      await api.put
+      const res = await api.put(`/notes/${id}`, {
+        title: note.title,
+        content: note.content
+      })
+
+      setNote(res.data)
+      toast.success("Note updated successfully!")
     }catch(error){
       console.log("Error saving the note:", error)
       toast.error("Failed to update note!")

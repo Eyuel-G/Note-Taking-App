@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 5000
 
 const allowedOrigins = [
   "http://localhost:5174",
-  "https://notes-frontend.onrender.com"
+  "https://notes-frontend.onrender.com",
+  "https://notes-frontend-tvd1.onrender.com"
 ];
 
 
